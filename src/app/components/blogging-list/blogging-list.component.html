@@ -1,1 +1,11 @@
-<p>blogging-list works!</p>
+
+<div class="flexBlogs">
+    @for (blog of myBlogList; track blog.title) {
+        <section>
+            <img [src]="blog.image" [alt]="blog.title">
+            <h3>{{blog.title}}</h3>
+            <p>{{blog.text}}</p>
+            <p>{{blog.publicationDate}}</p>
+        </section>
+    }
+</div>

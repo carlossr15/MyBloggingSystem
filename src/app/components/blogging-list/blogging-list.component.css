@@ -1,0 +1,17 @@
+section img {
+    width: 250px;
+    height: auto;
+}
+
+section {
+    border: 2px solid black;
+    padding: 10px;
+    max-width: 250px;
+}
+
+.flexBlogs {
+    display: flex;
+    gap: .625rem;
+    border-top: 25px;
+    flex-wrap: wrap;
+}

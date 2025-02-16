@@ -1,1 +1,7 @@
-<p>blogging-form works!</p>
+<div class="blogForm">
+    <h2>Insertar nuevo blog</h2>
+    <input type="text" placeholder="Título del blog" [(ngModel)]="newBlog.title">
+    <input type="text" placeholder="Añade una imagen" [(ngModel)]="newBlog.image">
+    <input type="text" placeholder="Texo" [(ngModel)]="newBlog.text">    
+    <button (click)="saveBlog()">Guardar Blog</button>
+</div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { IBlog } from '../../interfaces/iblog.interface';
 
 @Component({
   selector: 'app-blogging-list',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './blogging-list.component.css'
 })
 export class BloggingListComponent {
+  @Input() myBlogList : IBlog[] = [];
+
+  ngOnInit(){
+    console.log(this.myBlogList)
+  }
 
 }
