@@ -1,12 +1,21 @@
 <header>MyBloggingSystem</header>
 <body>
+  <ul class="menu">
+    <li [class.activo]="seccionActual === 'noticias'" (click)="cambiarSeccion('noticias')">Ver Noticias</li>
+    <li [class.activo]="seccionActual === 'formulario'" (click)="cambiarSeccion('formulario')">Crear Noticia</li>
+  </ul>
+  
+
   <div class="flex">
-    <aside>
-      <app-blogging-list [myBlogList]="myBlogs"></app-blogging-list>
-    </aside>
-    <aside>
-      <app-blogging-form (sendBlog)="getBlogForm($event)"></app-blogging-form>
-    </aside>
+    @if (seccionActual === 'noticias') {
+      <aside class="blogList">
+        <app-blogging-list [myBlogList]="myBlogs"></app-blogging-list>
+      </aside>
+    } @else if (seccionActual === 'formulario') {
+      <aside class="blogForm">
+        <app-blogging-form (sendBlog)="getBlogForm($event)"></app-blogging-form>
+      </aside>
+    }
   </div>
 </body>
 <footer>

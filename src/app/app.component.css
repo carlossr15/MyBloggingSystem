@@ -81,11 +81,40 @@ header {
 .flex {
     display: flex;
 }
+/* 
+.blogList {
+  width: 75%;
+} */
 
-.flex aside {
-    width: 50%;
-}
 
 aside {
   padding: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  text-align: center;  
+  padding: 15px;
+  width: 100%;
+}
+
+.menu li {
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  transition: .5s;
+
+  &:hover {
+    background-color: grey;
+    color: black;
+  }
+}
+
+.menu .activo {
+  background-color: tomato;
 }
