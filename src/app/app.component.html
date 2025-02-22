@@ -1,10 +1,9 @@
 <header>MyBloggingSystem</header>
-<body>
+<div class="content">
   <ul class="menu">
     <li [class.activo]="seccionActual === 'noticias'" (click)="cambiarSeccion('noticias')">Ver Noticias</li>
     <li [class.activo]="seccionActual === 'formulario'" (click)="cambiarSeccion('formulario')">Crear Noticia</li>
   </ul>
-  
 
   <div class="flex">
     @if (seccionActual === 'noticias') {
@@ -17,7 +16,14 @@
       </aside>
     }
   </div>
-</body>
-<footer>
-
+</div>
+<footer class="bloggingFooter">
+  <div class="footer-content">
+    <p>&copy; 2025 MyBloggingSystem. Todos los derechos reservados.</p>
+    <ul class="footer-links">
+      <li><a href="#">Política de Privacidad</a></li>
+      <li><a href="#">Términos de Servicio</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </div>
 </footer>

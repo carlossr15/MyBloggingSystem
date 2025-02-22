@@ -1,11 +1,21 @@
+<div class="ordenarNoticias">
+    <p>Ordenar Noticias</p>
+    <select name="" id="orderBlogs" (change)="orderBlogs($event)">
+        <option value="1">Nuevas - Antiguas</option>
+        <option value="2">Antiguas - Nuevas</option>    
+    </select>
+</div>
 
 <div class="flexBlogs">
     @for (blog of myBlogList; track blog.title) {
         <section>
             <img [src]="blog.image" [alt]="blog.title">
             <h3>{{blog.title}}</h3>
-            <p>{{blog.text}}</p>
-            <p>{{blog.publicationDate}}</p>
+            <p [class.collapsed]="blog.expanded">{{blog.text}}</p>
+            @if (isTextOverflow(blog.text)) {
+                <button class="moreOrLessButton" (click)="toggleText(blog)">{{moreOrLess(blog)}}</button>
+            }
+            <p class="publicationDate">{{blog.publicationDate}}</p>
         </section>
     }
 </div>

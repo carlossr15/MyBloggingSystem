@@ -1,7 +1,20 @@
-<div class="blogForm">
-    <h2>Insertar nuevo blog</h2>
-    <input type="text" placeholder="Título del blog" [(ngModel)]="newBlog.title">
-    <input type="text" placeholder="Añade una imagen" [(ngModel)]="newBlog.image">
-    <input type="text" placeholder="Texo" [(ngModel)]="newBlog.text">    
-    <button (click)="saveBlog()">Guardar Blog</button>
+<div class="blogFormContainer">
+    <div class="blogForm">
+        <h2>Insertar nuevo blog</h2>
+        <form (ngSubmit)="saveBlog()">
+            <div>
+                <label for="title">Título del blog:</label>
+                <input type="text" id="title" placeholder="Título del blog" [(ngModel)]="newBlog.title" name="title" required>
+            </div>
+            <div>
+                <label for="image">Añade una imagen:</label>
+                <input type="text" id="image" placeholder="Añade una imagen" [(ngModel)]="newBlog.image" name="image" required>
+            </div>
+            <div class="textarea-container">
+                <label for="text">Texto:</label>
+                <textarea id="text" placeholder="Texto" [(ngModel)]="newBlog.text" name="text" required></textarea>
+            </div>
+            <button type="submit">Guardar Blog</button>
+        </form>
+    </div>
 </div>

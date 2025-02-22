@@ -1,5 +1,78 @@
+.blogFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5; /* Light background color */
+}
+
 .blogForm {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blogForm:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.blogForm h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.blogForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogForm input[type="text"],
+.blogForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.blogForm input[type="text"]:focus,
+.blogForm textarea:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+.blogForm button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.blogForm button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
 }

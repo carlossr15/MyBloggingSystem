@@ -4,5 +4,6 @@ export interface IBlog {
     image: string;
     text: string;
     publicationDate: string;
+    expanded?: boolean; // Optional property to track expanded state
     
 }
